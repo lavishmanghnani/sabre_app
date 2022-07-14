@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sabre_app/Create_password.dart';
+import 'package:sabre_app/change_password.dart';
+import 'package:sabre_app/email_verify.dart';
 import 'package:sabre_app/forgetpassword.dart';
+import 'package:sabre_app/main.dart';
 import 'package:sabre_app/second_page.dart';
 
 void main() {
@@ -19,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ForgetPasswordScreen(title: 'Forget Password',),
+      home: const CreatePasswordScreen(title: '')
     );
   }
 }
@@ -208,14 +212,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ))
 
-              // children: <Widget>[
-              // const Text(
-              // 'You have pushed the button this many times:',
-              // ),
-              // Text(
-              //   '$_counter',
-              //   style: Theme.of(context).textTheme.headline4,
-              // ),
             ],
           ),
         ),
