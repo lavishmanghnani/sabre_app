@@ -6,7 +6,7 @@ import 'package:sabre_app/forgetpassword.dart';
 import 'package:sabre_app/main.dart';
 import 'package:sabre_app/privacy_policy.dart';
 import 'package:sabre_app/second_page.dart';
-import 'package:sabre_app/subcription.dart';
+import 'package:sabre_app/subscription.dart';
 import 'package:sabre_app/terms_and_conditions.dart';
 
 void main() {
@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const PrivacyPolicyScreen(title: 'Privacy Policy')
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const PrivacyPolicyScreen(title: 'Privacy Policy')
     );
   }
 }
@@ -70,8 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
           child: AppBar(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(20),
-            )),
+                  bottom: Radius.circular(20),
+                )),
             backgroundColor: primaryColor,
             leading: Icon(Icons.arrow_back_outlined),
             title: Text(
@@ -91,135 +91,135 @@ class _MyHomePageState extends State<MyHomePage> {
           )),
       body: SingleChildScrollView(
           child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-             Container(
-               decoration: BoxDecoration(
-                 shape: BoxShape.circle,
-                 image: DecorationImage(
-                   image: AssetImage('assets/images/image.jpg'),
-                   fit: BoxFit.cover
-                 )
-               ),
-                child: Icon(Icons.mail),
-                height: 200,
-                width: 200,
-              ),
-              SizedBox(
-                height: 16,
-              ),
-              Text(
-                'John smith',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-              ),
-              SizedBox(
-                height: 16,
-              ),
-              const Text(
-                'Security guard',
-              ),
-              SizedBox(
-                height: 16,
-              ),
-              Container(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width,
-                  color: Colors.white,
-                  child: Row(
-                    children: [
-                      Icon(Icons.email_sharp),
-                      SizedBox(width: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/image.jpg'),
+                            fit: BoxFit.cover
+                        )
+                    ),
+                    child: Icon(Icons.mail),
+                    height: 200,
+                    width: 200,
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Text(
+                    'John smith',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  const Text(
+                    'Security guard',
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                      height: 60,
+                      width: MediaQuery.of(context).size.width,
+                      color: Colors.white,
+                      child: Row(
                         children: [
-                          Text('Email'),
-                          SizedBox(height: 16),
-                          Text(
-                            'johnsmith123@gmail.com',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ],
-                  )),
-              SizedBox(height: 16),
-              Container(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width,
-                  color: Colors.white,
-                  child: Row(
-                    children: [
-                      Icon(Icons.phone),
-                      SizedBox(width: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text('Phone Number'),
-                          SizedBox(height: 16),
-                          Text(
-                            '323-123-4567',
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          Icon(Icons.email_sharp),
+                          SizedBox(width: 16),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('Email'),
+                              SizedBox(height: 16),
+                              Text(
+                                'johnsmith123@gmail.com',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              )
+                            ],
                           ),
                         ],
-                      ),
-                    ],
-                  )),
-              SizedBox(height: 16),
-              Container(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width,
-                  color: Colors.white,
-                  child: Row(
-                    children: [
-                      Icon(Icons.location_on),
-                      SizedBox(width: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
+                      )),
+                  SizedBox(height: 16),
+                  Container(
+                      height: 60,
+                      width: MediaQuery.of(context).size.width,
+                      color: Colors.white,
+                      child: Row(
                         children: [
-                          Text('Address*'),
-                          SizedBox(height: 16),
-                          Text(
-                            '123 Fake Street Los Angeles CA90000',
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          Icon(Icons.phone),
+                          SizedBox(width: 16),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('Phone Number'),
+                              SizedBox(height: 16),
+                              Text(
+                                '323-123-4567',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ],
                           ),
                         ],
-                      ),
-                    ],
-                  )),
-              SizedBox(height: 16),
-              Container(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width,
-                  color: Colors.white,
-                  child: Row(
-                    children: [
-                      Icon(Icons.calendar_month),
-                      SizedBox(width: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
+                      )),
+                  SizedBox(height: 16),
+                  Container(
+                      height: 60,
+                      width: MediaQuery.of(context).size.width,
+                      color: Colors.white,
+                      child: Row(
                         children: [
-                          Text('Date od Birth*'),
-                          SizedBox(height: 16),
-                          Text(
-                            'Nov 22, 1997',
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          Icon(Icons.location_on),
+                          SizedBox(width: 16),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('Address*'),
+                              SizedBox(height: 16),
+                              Text(
+                                '123 Fake Street Los Angeles CA90000',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ],
                           ),
                         ],
-                      ),
-                    ],
-                  ))
+                      )),
+                  SizedBox(height: 16),
+                  Container(
+                      height: 60,
+                      width: MediaQuery.of(context).size.width,
+                      color: Colors.white,
+                      child: Row(
+                        children: [
+                          Icon(Icons.calendar_month),
+                          SizedBox(width: 16),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('Date od Birth*'),
+                              SizedBox(height: 16),
+                              Text(
+                                'Nov 22, 1997',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ))
 
-            ],
-          ),
-        ),
-      )),
+                ],
+              ),
+            ),
+          )),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: _incrementCounter,
       //   tooltip: 'Increment',

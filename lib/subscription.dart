@@ -9,16 +9,16 @@ import 'package:sabre_app/second_page.dart';
 
 const primaryColor = Color(0xFF4169dd);
 
-class SubcriptioScreen extends StatefulWidget {
-  const SubcriptioScreen({Key? key, required this.title}) : super(key: key);
+class SubscriptioScreen extends StatefulWidget {
+  const SubscriptioScreen({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<SubcriptioScreen> createState() => _SubcriptioScreen();
+  State<SubscriptioScreen> createState() => _SubscriptioScreen();
 }
 
-class _SubcriptioScreen extends State<SubcriptioScreen> {
+class _SubscriptioScreen extends State<SubscriptioScreen> {
   int _counter = 0;
 
   void _incrementCounter() {
