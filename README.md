@@ -17,3 +17,58 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+Column(
+children: [
+Row(
+children: [
+Text(
+'Today',
+textAlign: TextAlign.left,
+),
+SizedBox(
+height: 10,
+)
+],
+),
+Column(
+children: [
+Card(
+child: Column(
+// mainAxisSize: MainAxisSize.min,
+children: <Widget>[
+ListTile(
+horizontalTitleGap: -5,
+leading: Image.asset('assets/icons/img.png'),
+title: Text(
+'Assinged Job',
+style: TextStyle(
+fontWeight: FontWeight.bold,
+),
+),
+subtitle: Container(
+margin: EdgeInsets.only(top: 10),
+child: Text(
+'Employee Termination - Riverside CA. Has been assigned to you.')),
+trailing: Text("2 hr ago"),
+),
+],
+),
+),
+SizedBox(
+height: 10,
+),
+],
+)
+],
+),

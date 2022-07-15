@@ -4,6 +4,7 @@ import 'package:sabre_app/checklist.dart';
 import 'package:sabre_app/email_verify.dart';
 import 'package:sabre_app/forgetpassword.dart';
 import 'package:sabre_app/main.dart';
+import 'package:sabre_app/notification.dart';
 import 'package:sabre_app/privacy_policy.dart';
 import 'package:sabre_app/second_page.dart';
 import 'package:sabre_app/subscription.dart';
@@ -21,14 +22,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Notification panel ',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const PrivacyPolicyScreen(title: 'Privacy Policy')
-    );
+        home:  NotificationScreen(
+
+    ));
   }
 }
 
