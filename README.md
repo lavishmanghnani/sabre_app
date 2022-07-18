@@ -28,47 +28,263 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-Column(
-children: [
-Row(
-children: [
-Text(
-'Today',
-textAlign: TextAlign.left,
-),
-SizedBox(
-height: 10,
-)
-],
-),
-Column(
-children: [
-Card(
-child: Column(
-// mainAxisSize: MainAxisSize.min,
-children: <Widget>[
-ListTile(
-horizontalTitleGap: -5,
-leading: Image.asset('assets/icons/img.png'),
-title: Text(
-'Assinged Job',
-style: TextStyle(
-fontWeight: FontWeight.bold,
-),
-),
-subtitle: Container(
-margin: EdgeInsets.only(top: 10),
-child: Text(
-'Employee Termination - Riverside CA. Has been assigned to you.')),
-trailing: Text("2 hr ago"),
-),
-],
-),
-),
-SizedBox(
-height: 10,
-),
-],
-)
-],
-),
+
+
+// Column(
+//   // mainAxisAlignment: MainAxisAlignment.start,
+//   // crossAxisAlignment: CrossAxisAlignment.start,
+//   children: [
+//     Padding(
+//         padding: const EdgeInsets.all(30.0),
+//         child: Column(
+//           children: [
+//             Row(
+//               children: [
+//                 Text(
+//                   'Basic Information',
+//                   style: TextStyle(
+//                       fontWeight: FontWeight.bold, fontSize: 18),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Client Name',
+//                 ),
+//                 Text(
+//                   'ABC Company',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               crossAxisAlignment: CrossAxisAlignment.start,
+//               children: [
+//                 Text(
+//                   'Pay Rate',
+//                 ),
+//                 Text(
+//                   '\$450',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Date of Assignment',
+//                 ),
+//                 Text(
+//                   '01/01/2022',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Point of Contact',
+//                 ),
+//                 Text(
+//                   'John Smith',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Point of Contact Cell Phone',
+//                 ),
+//                 Text(
+//                   '323-123-4567',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Location',
+//                 ),
+//                 Text(
+//                   'Los Angeles',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Address',
+//                 ),
+//                 Text(
+//                   '123 Fake street Los Angeles CA 90000',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 20,
+//             ),
+//             Divider(
+//               height: 1,
+//               thickness: 2,
+//               indent: 1,
+//               endIndent: 0,
+//               color: Color(0xffDEE3F2),
+//             ),
+//             SizedBox(
+//               height: 20,
+//             ),
+//             Row(
+//               children: [
+//                 Text(
+//                   'Detail Specifics',
+//                   style: TextStyle(
+//                       fontWeight: FontWeight.bold, fontSize: 18),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Agent Attire',
+//                 ),
+//                 Text(
+//                   'Black Polo and BDU',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Armed',
+//                 ),
+//                 Text(
+//                   'Yes',
+//                   style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(
+//               height: 15,
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   'Concealed',
+//                 ),
+//                 Text(
+//                   'Yes',
+//                    style: TextStyle(
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//             SizedBox(height: 10),
+//             Row(
+//                 crossAxisAlignment: CrossAxisAlignment.center,
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 children: <Widget>[
+//                   ElevatedButton(
+//                     child: Text('Apply'),
+//                     onPressed: () {
+//                       // if (_formKey.currentState!.validate()) {
+//                       //   // If the form is valid, display a snackbar. In the real world,
+//                       //   // you'd often call a server or save the information in a database.
+//                       //   ScaffoldMessenger.of(context).showSnackBar(
+//                       //     const SnackBar(
+//                       //         content: Text('Processing Data')),
+//                       //   );
+//                       // }if (_formKey.currentState!.validate()) {
+//                       //   // If the form is valid, display a snackbar. In the real world,
+//                       //   // you'd often call a server or save the information in a database.
+//                       //   ScaffoldMessenger.of(context).showSnackBar(
+//                       //     const SnackBar(
+//                       //         content: Text('Processing Data')),
+//                       //   );
+//                       // }
+//                     },
+//                     style: ButtonStyle(
+//                         shape: MaterialStateProperty.all<
+//                                 RoundedRectangleBorder>(
+//                             RoundedRectangleBorder(
+//                           borderRadius: BorderRadius.circular(40.0),
+//                         )),
+//                         backgroundColor: MaterialStateProperty.all(
+//                             Color(0xFF4169dd)),
+//                         padding: MaterialStateProperty.all(
+//                             EdgeInsets.only(
+//                                 left: 60,
+//                                 right: 60,
+//                                 bottom: 20,
+//                                 top: 20)),
+//                         textStyle: MaterialStateProperty.all(
+//                             TextStyle(fontSize: 25)),
+//                         alignment: Alignment.topRight),
+//                   ),
+//                 ])
+//           ],
+//         )),
+//   ],
+// ),
+
