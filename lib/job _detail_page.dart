@@ -205,126 +205,15 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
                             const SizedBox(
                               height: 15,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Client Name',
-                                ),
-                                Text(
-                                  'ABC Company',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  'Pay Rate',
-                                ),
-                                Text(
-                                  '\$450',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Date of Assignment',
-                                ),
-                                Text(
-                                  '01/01/2022',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Point of Contact',
-                                ),
-                                Text(
-                                  'John Smith',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Point of Contact Cell Phone',
-                                ),
-                                Text(
-                                  '323-123-4567',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Location',
-                                ),
-                                Text(
-                                  'Los Angeles',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Address',
-                                ),
-                                Text(
-                                  '123 Fake street Los Angeles CA 90000',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            commonRow('Client Name', 'ABC Company'),
+                            commonRow('Pay Rate', '\$450'),
+                            commonRow('Date of Assignment', '01/01/2022'),
+                            commonRow('Point of Contact', 'John Smith'),
+                            commonRow(
+                                'Point of Contact Cell Phone', '323-123-4567'),
+                            commonRow('Location', 'Los Angeles'),
+                            commonRow('Address',
+                                '123 Fake street Los Angeles CA 90000'),
                             const Divider(
                               height: 1,
                               thickness: 2,
@@ -348,54 +237,9 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
                             const SizedBox(
                               height: 15,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Agent Attire',
-                                ),
-                                Text(
-                                  'Black Polo and BDU',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Armed',
-                                ),
-                                Text(
-                                  'Yes',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
-                                  'Concealed',
-                                ),
-                                Text(
-                                  'Yes',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
+                            commonRow('Agent Name', 'Black Polo and DBU'),
+                            commonRow('Armed', 'Yes'),
+                            commonRow('Concealed', 'Yes'),
                             const SizedBox(height: 10),
                             Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -405,44 +249,50 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
                                     child: const Text('Submitted'),
                                     onPressed: () => showDialog<String>(
                                       context: context,
-                                      builder: (BuildContext context) =>
-                                          Container(
-                                            // height: 150,
-                                            // width: 200,
-                                            // margin: EdgeInsets.only(left: 30.0, right: 30),
-                                            padding: EdgeInsets.all(12.0),
-                                            child: AlertDialog(
+                                      builder: (BuildContext context) => Dialog(
                                         shape: const RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.all(
-                                                  const Radius.circular(20.0))),
-                                        title: Image.asset(
-                                            'assets/icons/right_icon.png',
-                                            height: 100,
-                                            width: 100,
-                                        ),
-                                        content: const Text(
-                                            'Submitted',
-                                            style: TextStyle(
-                                                fontSize: 25,
-                                                fontWeight: FontWeight.bold),
-                                            textAlign: TextAlign.center,
-                                        ),
-                                        actions: <Widget>[
+                                            borderRadius: BorderRadius.all(
+                                                const Radius.circular(20.0))),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Image.asset(
+                                              'assets/icons/right_icon.png',
+                                              height: 100,
+                                              width: 100,
+                                            ),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text(
+                                              'Submitted',
+                                              style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
                                             Center(
                                               child: ElevatedButton(
                                                   onPressed: () {},
                                                   child: const Text('Ok'),
                                                   style: ButtonStyle(
-                                                      shape: MaterialStateProperty
-                                                          .all<RoundedRectangleBorder>(
-                                                              RoundedRectangleBorder(
+                                                      shape: MaterialStateProperty.all<
+                                                              RoundedRectangleBorder>(
+                                                          RoundedRectangleBorder(
                                                         borderRadius:
-                                                            BorderRadius.circular(
-                                                                40.0),
+                                                            BorderRadius
+                                                                .circular(40.0),
                                                       )),
                                                       backgroundColor:
                                                           MaterialStateProperty.all(
-                                                              const Color(0xFF4169dd)),
+                                                              const Color(
+                                                                  0xFF4169dd)),
                                                       padding:
                                                           MaterialStateProperty.all(
                                                               const EdgeInsets.only(
@@ -451,16 +301,19 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
                                                                   bottom: 20,
                                                                   top: 20)),
                                                       textStyle:
-                                                          MaterialStateProperty
-                                                              .all(const TextStyle(
-                                                                  fontSize: 25)),
+                                                          MaterialStateProperty.all(
+                                                              const TextStyle(
+                                                                  fontSize:
+                                                                      25)),
                                                       alignment:
                                                           Alignment.topRight)),
                                             ),
-                                        ],
-                                        actionsPadding: const EdgeInsets.all(20),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                          ),
                                     ),
                                     style: ButtonStyle(
                                         shape: MaterialStateProperty.all<
@@ -482,9 +335,7 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
                                             const TextStyle(fontSize: 25)),
                                         alignment: Alignment.topRight),
                                   ),
-                                ]
-                            )
-                            
+                                ])
                           ],
                         )),
                   ],
@@ -494,6 +345,36 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
           ],
         ),
       ),
+    );
+  }
+
+  commonRow(String text1, text2) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              flex: 5,
+              child: Text(
+                text1,
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Text(
+                text2,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+      ],
     );
   }
 }
