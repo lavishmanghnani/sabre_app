@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sabre_app/change_password.dart';
 import 'package:sabre_app/checklist.dart';
+import 'package:sabre_app/demo.dart';
 import 'package:sabre_app/email_verify.dart';
 import 'package:sabre_app/forgetpassword.dart';
 import 'package:sabre_app/job%20_detail_page.dart';
@@ -10,6 +11,7 @@ import 'package:sabre_app/privacy_policy.dart';
 import 'package:sabre_app/second_page.dart';
 import 'package:sabre_app/subscription.dart';
 import 'package:sabre_app/terms_and_conditions.dart';
+import 'package:sabre_app/upload_expense.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home:  EmployeeTerminationScreen(
+        home:  const UploadExpenseScreen(
 
     ));
   }

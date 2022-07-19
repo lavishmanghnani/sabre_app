@@ -222,7 +222,7 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
                               color: Color(0xffDEE3F2),
                             ),
                             const SizedBox(
-                              height: 20,
+                              height: 10,
                             ),
                             Row(
                               children: const [
