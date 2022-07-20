@@ -1,17 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sabre_app/change_password.dart';
-import 'package:sabre_app/checklist.dart';
-import 'package:sabre_app/demo.dart';
-import 'package:sabre_app/email_verify.dart';
-import 'package:sabre_app/forgetpassword.dart';
-import 'package:sabre_app/job%20_detail_page.dart';
-import 'package:sabre_app/main.dart';
-import 'package:sabre_app/notification.dart';
-import 'package:sabre_app/privacy_policy.dart';
-import 'package:sabre_app/second_page.dart';
-import 'package:sabre_app/subscription.dart';
-import 'package:sabre_app/terms_and_conditions.dart';
-import 'package:sabre_app/upload_expense.dart';
+import 'package:sabre_app/ui/screens/terms_and_conditions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +20,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home:  const EmployeeTerminationScreen(
+        home:  const TermsAndConditionsScreen(title: '',
 
     ));
   }
@@ -48,13 +36,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   void initState() {

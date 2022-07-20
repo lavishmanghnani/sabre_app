@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sabre_app/repositories/fetchdata.dart';
 
 class EmployeeTerminationScreen extends StatefulWidget {
   const EmployeeTerminationScreen({Key? key}) : super(key: key);
@@ -247,74 +248,9 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
                                 children: <Widget>[
                                   ElevatedButton(
                                     child: const Text('Submitted'),
-                                    onPressed: () => showDialog<String>(
-                                      context: context,
-                                      builder: (BuildContext context) => Dialog(
-                                        shape: const RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.all(
-                                                const Radius.circular(20.0))),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Image.asset(
-                                              'assets/icons/right_icon.png',
-                                              height: 100,
-                                              width: 100,
-                                            ),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Text(
-                                              'Submitted',
-                                              style: TextStyle(
-                                                  fontSize: 25,
-                                                  fontWeight: FontWeight.bold),
-                                              textAlign: TextAlign.center,
-                                            ),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                            Center(
-                                              child: ElevatedButton(
-                                                  onPressed: () {},
-                                                  child: const Text('Ok'),
-                                                  style: ButtonStyle(
-                                                      shape: MaterialStateProperty.all<
-                                                              RoundedRectangleBorder>(
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      )),
-                                                      backgroundColor:
-                                                          MaterialStateProperty.all(
-                                                              const Color(
-                                                                  0xFF4169dd)),
-                                                      padding:
-                                                          MaterialStateProperty.all(
-                                                              const EdgeInsets.only(
-                                                                  left: 60,
-                                                                  right: 60,
-                                                                  bottom: 20,
-                                                                  top: 20)),
-                                                      textStyle:
-                                                          MaterialStateProperty.all(
-                                                              const TextStyle(
-                                                                  fontSize:
-                                                                      25)),
-                                                      alignment:
-                                                          Alignment.topRight)),
-                                            ),
-                                            SizedBox(
-                                              height: 20,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
+                                    onPressed: () {
+                                      fetchAlbum();
+                                    },
                                     style: ButtonStyle(
                                         shape: MaterialStateProperty.all<
                                                 RoundedRectangleBorder>(
@@ -347,6 +283,77 @@ class _EmployeeTerminationScreenState extends State<EmployeeTerminationScreen> {
       ),
     );
   }
+
+  void showDailog(){
+    showDialog<String>(
+      context: context,
+      builder: (BuildContext context) => Dialog(
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+                const Radius.circular(20.0))),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            Image.asset(
+              'assets/icons/right_icon.png',
+              height: 100,
+              width: 100,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Submitted',
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+              child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Ok'),
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<
+                          RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius:
+                            BorderRadius
+                                .circular(40.0),
+                          )),
+                      backgroundColor:
+                      MaterialStateProperty.all(
+                          const Color(
+                              0xFF4169dd)),
+                      padding:
+                      MaterialStateProperty.all(
+                          const EdgeInsets.only(
+                              left: 60,
+                              right: 60,
+                              bottom: 20,
+                              top: 20)),
+                      textStyle:
+                      MaterialStateProperty.all(
+                          const TextStyle(
+                              fontSize:
+                              25)),
+                      alignment:
+                      Alignment.topRight)),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
+      ),
+    );
+}
 
   commonRow(String text1, text2) {
     return Column(

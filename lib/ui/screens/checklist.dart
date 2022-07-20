@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sabre_app/Create_password.dart';
-import 'package:sabre_app/change_password.dart';
-import 'package:sabre_app/email_verify.dart';
-import 'package:sabre_app/forgetpassword.dart';
-import 'package:sabre_app/main.dart';
-import 'package:sabre_app/second_page.dart';
+
 
 const primaryColor = Color(0xFF4169dd);
 
